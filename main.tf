@@ -66,5 +66,5 @@ resource "google_container_cluster" "cluster" {
 
   # node_version (node_pool overrides)
   # project
-  # subnetwork
+  subnetwork = "${local.merged_settings["subnetwork"]}"
 }
